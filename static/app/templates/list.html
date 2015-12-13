@@ -1,0 +1,14 @@
+<div class="jumbotron">
+    <div class="container" style="padding-top:48px">
+        <h1>Lista pojazdów</h1>
+    </div>
+</div>
+<div class="container">
+    <div ng-if="loaded">
+        <card ng-repeat="vehicle in vehicles" vehicle="vehicle">
+        </card>
+    </div>
+    <div ng-if="!loaded">
+        Loading data...
+    </div>
+</div>
