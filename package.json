@@ -1,0 +1,24 @@
+{
+  "name": "electric-cars-angular",
+  "version": "0.0.0",
+  "description": "ETI PG Project",
+  "main": "app.js",
+  "dependencies": {
+    "express": "~4.13.3",
+    "body-parser": "~1.14.1",
+    "socket.io": "~1.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wnadurski/electric-cars-angular.git"
+  },
+  "author": "Nadurski",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/wnadurski/electric-cars-angular/issues"
+  }
+}
