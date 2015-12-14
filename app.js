@@ -4,8 +4,12 @@
 
 var express = require('express');
 var path = require('path');
+var bodyParser = require('body-parser');
+var socket = require("socket.io");
 
 var app = express();
+
+var io;
 
 var vehicles = [
     {
@@ -24,10 +28,25 @@ var vehicles = [
     }
 ];
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
 app.use(express.static('static'));
 
 app.all("/api/vehicles", function(req,res) {
     res.json(vehicles);
+});
+
+app.post("/api/vehicles/add", function(req,res) {
+    var veh = req.body;
+    veh.id = vehicles[vehicles.length-1].id+1;
+
+    vehicles.push(veh);
+
+    console.log("Broadcasting");
+    io.sockets.emit('evAdded', veh);
+
+    res.json({response: 'success'});
 });
 
 app.all("/api/*", function(req,res) {
@@ -45,4 +64,10 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
 
     console.log('Listening at http://%s:%s', host, port);
+});
+
+io = socket.listen(server);
+
+io.sockets.on("connection", function(socket) {
+    console.log("Connected");
 });

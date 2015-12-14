@@ -8,7 +8,7 @@
     <title>EVs catalogue</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,6 +26,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">Strona Główna</a></li>
                 <li><a href="/vehicles">Katalog</a></li>
+                <li><a href="/vehicles/add">Dodaj</a></li>
             </ul>
 		</div>	
 	</nav>
@@ -35,19 +36,23 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
-    <script src="js/angular.js"></script>
-    <script src="js/angular-route.js"></script>
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/angular.js"></script>
+    <script src="/js/angular-route.js"></script>
 
 
-    <script src="app/app.js"></script>
+    <script src="/app/app.js"></script>
 
-    <script src="app/controllers/listcontroller.js"></script>
-    <script src="app/services/vehicle.js"></script>
-    <script src="app/directives/card.js"></script>
-    <script src="app/filters/milestokm.js"></script>
 
-    <script src="app/routes.js"></script>
+    <script src="/app/controllers/listcontroller.js"></script>
+    <script src="/app/services/vehicle.js"></script>
+    <script src="/app/services/socket.js"></script>
+    <script src="/app/directives/card.js"></script>
+    <script src="/app/filters/milestokm.js"></script>
+
+    <script src="/app/routes.js"></script>
+    <script src="/app/controllers/addcontroller.js"></script>
   </body>
 </html>

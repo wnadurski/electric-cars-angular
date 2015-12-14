@@ -6,7 +6,8 @@
     angular.module('evs').
         factory('Vehicle', ['$http', function VehicleFactory($http) {
             return {
-               all: function() { return $http({method: "GET", url: "api/vehicles"});}
+               all: function() { return $http({method: "GET", url: "api/vehicles"});},
+               add: function(ev) { return $http.post("api/vehicles/add", ev);}
             } ;
     }]);
 })();

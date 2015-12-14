@@ -1,0 +1,48 @@
+<div class="jumbotron">
+    <div class="container" style="padding-top:48px">
+        <h1>Dodaj nowy pojazd</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-6 col-md-offset-3 panel panel-default text-center">
+        <h1>Dodaj pojazd</h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="name" class="control-label">Nazwa</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Nazwa" ng-model="vehicle.name">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="company" class="control-label">Producent</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="company" placeholder="Producent" ng-model="vehicle.company">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="range" class="control-label">Zasięg</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="range" placeholder="Zasięg" ng-model="vehicle.range">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="image" class="control-label">Obrazek</label>
+                </div>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="image" placeholder="Obrazek" ng-model="vehicle.imgUrl">
+                </div>
+            </div>
+            <div class="form-group">
+                    <button type="submit" class="btn btn-default" ng-click="add()">Dodaj</button>
+            </div>
+        </form>
+    </div>
+</div>
